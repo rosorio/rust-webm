@@ -1,4 +1,13 @@
 
+#ifdef __FreeBSD__
+#include "webm/mkvmuxer/mkvmuxer.h"
+#include "webm/mkvmuxer/mkvmuxertypes.h"
+#include "webm/mkvmuxer/mkvmuxerutil.h"
+#include "webm/mkvmuxer/mkvwriter.h"
+#include "webm/mkvparser/mkvparser.h"
+#include "webm/mkvparser/mkvreader.h"
+#include "webm/common/webmids.h"
+#else
 #include "libwebm/mkvmuxer/mkvmuxer.h"
 #include "libwebm/mkvmuxer/mkvmuxertypes.h"
 #include "libwebm/mkvmuxer/mkvmuxerutil.h"
@@ -6,6 +15,7 @@
 #include "libwebm/mkvparser/mkvparser.h"
 #include "libwebm/mkvparser/mkvreader.h"
 #include "libwebm/common/webmids.h"
+#endif
 
 #include <stdint.h>
 #include <assert.h>
